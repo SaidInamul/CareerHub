@@ -35,7 +35,7 @@
                                         href="{{ url('/dashboard') }}"
                                         class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
                                     >
-                                        Dashboard
+                                        Hello world
                                     </a>
                                 @else
                                     <a
@@ -134,7 +134,7 @@
                                 </div>
 
                                 <div class="pt-3 sm:pt-5">
-                                    <h2 class="text-xl font-semibold text-black dark:text-white">Laravel News</h2>
+                                    <h2 class="text-xl font-semibold text-black dark:text-white">Hello world</h2>
 
                                     <p class="mt-4 text-sm/relaxed">
                                         Laravel News is a community driven portal and newsletter aggregating all of the latest and most important news in the Laravel ecosystem, including new package releases and tutorials.
