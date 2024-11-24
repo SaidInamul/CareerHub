@@ -29,4 +29,10 @@ class Job extends Model
     public function tags () {
         return $this->belongsToMany(Tag::class, 'job_tags');
     }
+
+    public function tag(string $name) : void {
+        $tag = Tag::firstOrCreate(['name' => $name]);
+
+        $this->tags()->attach($tag);
+    }
 }

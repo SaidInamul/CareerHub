@@ -1,7 +1,7 @@
 @props(['job'])
 
 <x-panel class="gap-x-6">
-    <x-employer-logo>
+    <x-employer-logo :$job>
         {{ $slot }}
     </x-employer-logo>
         

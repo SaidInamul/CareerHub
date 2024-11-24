@@ -1,3 +1,3 @@
-@props(['width' => 90])
+@props(['job', 'width' => 90])
 
-<img src="http://picsum.photos/seed/{{ rand(0, 10000) }}/{{ $width }}" alt="" class="rounded-xl">
+<img src="{{ Vite::asset('storage/app/private/' . $job->employer->logo) }}" alt="" class="rounded-xl" style="width: {{ $width }}px; height: {{ $width }}px;">

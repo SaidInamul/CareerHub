@@ -13,7 +13,7 @@
             @endforeach
         </div>
 
-        <x-employer-logo :width="42">
+        <x-employer-logo :width="42" :$job>
             {{ $slot }}
         </x-employer-logo>
     </div>

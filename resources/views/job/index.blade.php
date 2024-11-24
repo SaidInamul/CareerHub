@@ -2,9 +2,13 @@
     <div class="space-y-10 ">
         <section class="text-center pt-6">
             <h1 class="font-bold text-4xl mb-6">Let's find your next job</h1>
-            <form action="" class="">
+            {{-- <form action="" class="">
                 <input type="text" placeholder="Web Developer..." class="rounded-xl border border-white/10 bg-white/5 w-full max-w-xl px-5 py-4 hover:bg-white/10 transition-colors duration-300">
-            </form>
+            </form> --}}
+
+            <x-forms.form action="/search">
+                <x-forms.input placeholder="Web Developer..." name="search" :label=false class="mt-3"></x-forms.input>
+            </x-forms.form>
         </section>
 
         <section class="pt-10">
