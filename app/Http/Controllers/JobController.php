@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Auth;
 class JobController extends Controller
 {
     public function index () {
-        $jobs = Job::latest()->get()->groupBy('featured');
+        $jobs = Job::latest()->with(['employer', 'tags'])->get()->groupBy('featured');
         return view('job.index', [
             'featuredJobs' => $jobs[1],
             'unFeaturedJobs' => $jobs[0],

@@ -19,19 +19,20 @@
                 </a>
             </div>
             <div class="space-x-6 font-bold">
-                <a href="#">Jobs</a>
-                <a href="#">Careers</a>
-                <a href="">Salaries</a>
-                <a href="">Companies</a>
+                <a href="/">Jobs</a>
+                @auth
+                    <a href="/jobs/create">Post a job</a>
+                @endauth
+                
+                <a href="/">Companies</a>
             </div>
 
             @auth
                 <div>
-                    <a href="/jobs/create">Post a job</a>
-                    <x-forms.form action="/logout" method="POST">
-                        @method('DELETE')
-                        <x-forms.button type="submit">Log out</x-forms.button>
-                    </x-forms.form>
+                    <form action="/logout" method="POST">
+                        @csrf
+                        <button type="submit">Log out</button>
+                    </form>
                 </div>
             @endauth
 
